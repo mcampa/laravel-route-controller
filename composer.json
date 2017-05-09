@@ -1,0 +1,23 @@
+{
+    "name": "shrimpwagon/laravel",
+    "description": "Adds back the Route:controller functionality that was removed in Laravel 5.3 and 5.4",
+    "type": "library",
+    "homepage": "http://github.com/shrimpwagon/digium-switchvox-api",
+    "keywords": ["laravel", "route", "controller"],
+    "version": "1.0.0",
+    "require": {
+        "laravel/framework": "~5.2"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Shawn Welch",
+            "email": "shrimpwagon@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Shrimpwagon\\Laravel\\": "src/"
+        }
+    }
+}
