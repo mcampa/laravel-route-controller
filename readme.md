@@ -10,19 +10,15 @@ I too found the Route::controller method to be extremely helpful, clean and unde
 
 Modify app/Providers/RouteServiceProvider.php
 
-Change:
+Add:
 
-    use Illuminate\Routing\Router;
+    use Shrimpwagon\Laravel\Router as ControllerRouter;
 
-To:
-
-    use Shrimpwagon\Laravel\Router;
-
-And add this method:
+And:
 
     protected function registerRouter()
     {
-        $this->app['router'] = $this->app->share(function ($app) {
-            return new Router($app['events'], $app);
+        $this->app->singleton('router', function ($app) {
+            return new ControllerRouter($app['events'], $app);
         });
     }
